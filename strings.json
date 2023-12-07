@@ -1,0 +1,20 @@
+{
+    "title":"Simple Tools",
+    "resize_font_menu":"Aumentar Documento Word\n(Carta ou Livro)",
+    "resize_image_menu":"Aumentar imagem",
+
+    "resize_font_path":"Ficheiro: ",
+    "resize_font_factor":"Factor",
+    "resize_font_submit":"Submeter",
+    "resize_image_path":"Imagem: ",
+    "resize_image_factor":"Factor",
+    "resize_image_submit":"Submeter",
+
+    "back":"[Voltar]",
+    "get_file_path":"Escolher Ficheiro",
+
+    "error_empty_path":"Não foi dado o Ficheiro",
+    "error_empty_factor":"Não foi dado o Factor",
+    "error_low_factor":"O Factor tem de ser superior a 0",
+    "error_NaN_factor":"O Factor tem de ser um Número"
+}
