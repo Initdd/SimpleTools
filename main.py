@@ -88,7 +88,7 @@ class App:
 
         # Execution Button
         btn_execute = tk.Button(self.master, text=STRINGS["resize_font_submit"], command=lambda: message_label.config(text=self.execute_resize_font(
-            file_path_entry.get(), entry_resize_factor.get())), font=self.font) #, state=tk.DISABLED)
+            file_path_entry.get(), entry_resize_factor.get())), font=self.font)
         btn_execute.pack(pady=10)
 
         # Messages Label
@@ -98,10 +98,6 @@ class App:
         # Back Button
         btn_back = tk.Button(self.master, text=STRINGS["back"], command=self.reset_main_menu, font=self.font)
         btn_back.pack(pady=10, side=tk.BOTTOM)
-
-        # Enable execution button based on input
-        #entry_resize_factor.bind("<KeyRelease>", lambda event: self.enable_execution_button(btn_execute, file_path_entry, entry_resize_factor))
-
 
     def execute_resize_font(self, docx_path, resize_factor):
         status = self.validate(docx_path, resize_factor)
@@ -135,7 +131,7 @@ class App:
 
         # Execution Button
         btn_execute = tk.Button(self.master, text=STRINGS["resize_image_submit"], command=lambda: message_label.config(text=self.execute_amplify_image(
-            file_path_entry.get(), entry_resize_factor.get())), font=self.font) #, state=tk.DISABLED)
+            file_path_entry.get(), entry_resize_factor.get())), font=self.font)
         btn_execute.pack(pady=10)
 
         # Messages Label
@@ -145,9 +141,6 @@ class App:
         # Back Button
         btn_back = tk.Button(self.master, text=STRINGS["back"], command=self.reset_main_menu, font=self.font)
         btn_back.pack(pady=10, side=tk.BOTTOM)
-
-        # Enable execution button based on input
-        #entry_resize_factor.bind("<KeyRelease>", lambda event: self.enable_execution_button(btn_execute, file_path_entry, entry_resize_factor))
 
     def execute_amplify_image(self, input_path, resize_factor):
         status = self.validate(input_path, resize_factor)
