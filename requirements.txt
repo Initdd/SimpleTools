@@ -1,0 +1,4 @@
+# requirements.txt
+
+# Tkinter for GUI
+tkinter==8.6.12
