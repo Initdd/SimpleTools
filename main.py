@@ -83,7 +83,7 @@ class App:
         lbl_resize_factor = tk.Label(input_frame, text=STRINGS["resize_font_factor"], font=self.font)
         lbl_resize_factor.grid(row=1, column=0, pady=5)
 
-        entry_resize_factor = tk.Entry(input_frame, font=self.font)
+        entry_resize_factor = tk.Spinbox(input_frame, from_=0, to=1000, textvariable=2, font=self.font)
         entry_resize_factor.grid(row=1, column=1, pady=5)
 
         # Execution Button
@@ -126,7 +126,7 @@ class App:
         lbl_resize_factor = tk.Label(input_frame, text=STRINGS["resize_image_factor"], font=self.font)
         lbl_resize_factor.grid(row=1, column=0, pady=5)
 
-        entry_resize_factor = tk.Entry(input_frame, font=self.font)
+        entry_resize_factor = tk.Spinbox(input_frame, from_=0, to=1000, textvariable=2, font=self.font)
         entry_resize_factor.grid(row=1, column=1, pady=5)
 
         # Execution Button
