@@ -14,30 +14,46 @@ people not that used to technology, like your grandparents.
 
 ## Installation
 
-1. Clone the repository to your local machine:
+1. Install Python 3 on your machine. You can download it from the official website: https://www.python.org/downloads/
+
+2. Clone the repository to your local machine:
 
     ```bash
     git clone https://github.com/Initdd/SimpleTools.git
     ```
 
-2. Navigate to the project directory:
+3. Navigate to the project directory:
 
     ```bash
     cd SimpleTools
     ```
 
-3. Install the required dependencies:
+4. Install the required dependencies:
 
     ```bash
     pip install -r requirements.txt
     ```
+    May not work on Linux. If so, try to install the dependencies manually.
+
+    Some dependencies are omitted, as they are already included in the Python standard library.
+
 
 ## Usage
 
 1. Run the application by executing the following command:
 
+    * On Windows:
+
     ```bash
-    python main.py
+    python main.py 
+    # or
+    py main.py
+    ```
+
+    * On Linux:
+    
+    ```bash
+    python3 main.py
     ```
 
     The app will launch, providing a simple menu for the diferent functions
@@ -63,9 +79,10 @@ The app relies on the following tools and libraries:
 
 * Tkinter: The standard GUI toolkit for Python.
 * json: Standard JSON library for Python.
+* Pillow: Python Imaging Library (PIL).
+* python-docx: Python library for creating and updating Microsoft Word (.docx) files.
 
 ## Contributing
 
 I welcome contributions that enhance functionality, fix issues, or improve the overall quality of the application.
-
 
