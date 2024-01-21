@@ -43,7 +43,7 @@ people not that used to technology, like your grandparents 😉
 
 1. Run the application by executing the following command:
 
-    * On Windows:
+* On Windows:
 
     ```bash
     python main.py 
@@ -51,7 +51,7 @@ people not that used to technology, like your grandparents 😉
     py main.py
     ```
 
-    * On Linux:
+* On Linux:
     
     ```bash
     python3 main.py
@@ -71,8 +71,8 @@ people not that used to technology, like your grandparents 😉
     - Set the resizing factor.  
     - Click the Submit to amplify the image.
 
-* Multi-Language Support:  
-    - The application supports multiple languages, and strings can be easily customized.
+* Multi-Language Support:
+    - The application supports multiple languages, and strings can be easily customized on the `strings.json` file.
 
 ## Dependencies
 
