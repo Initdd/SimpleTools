@@ -17,7 +17,7 @@ def resize_font(docx_src, docx_dest, resize_factor):
             else:
                 current_font_size = last_font_size
             amplified_font_size = current_font_size * resize_factor
-            run.font.size = amplified_font_size
+            run.font.size = int(amplified_font_size)
 
     # Save the modified document
     output_path = f'{docx_dest}.docx'
