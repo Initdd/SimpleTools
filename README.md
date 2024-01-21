@@ -14,21 +14,22 @@ people not that used to technology, like your grandparents 😉
 
 ## Installation
 
-1. Install Python 3 on your machine. You can download it from the official website: https://www.python.org/downloads/
+1. Install Python 3 on your machine. You can download it from the official website:
+    https://www.python.org/downloads/
 
-2. Clone the repository to your local machine:
+3. Clone the repository to your local machine:
 
     ```bash
     git clone https://github.com/Initdd/SimpleTools.git
     ```
 
-3. Navigate to the project directory:
+4. Navigate to the project directory:
 
     ```bash
     cd SimpleTools
     ```
 
-4. Install the required dependencies:
+5. Install the required dependencies:
 
     ```bash
     pip install -r requirements.txt
