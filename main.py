@@ -1,10 +1,8 @@
 # libraries
 import tkinter as tk
 from tkinter import *
-from tkinter import ttk
 from tkinter import filedialog
 from tkinter import font
-from functools import partial
 import sys
 import json
 
@@ -142,7 +140,7 @@ class App:
         status = self.validate(input_path, resize_factor)
         if status != None:
             return status
-        return ampimg.amplify_image(input_path, "amplified_document", float(resize_factor)) #amplify_factor)
+        return ampimg.amplify_image(input_path, "amplified_image", float(resize_factor))
 
     def reset_main_menu(self):
         self.clear_window()
