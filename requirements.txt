@@ -2,3 +2,7 @@
 
 # Tkinter for GUI
 tkinter==8.6.12
+# Pillow for image processing
+Pillow==10.2.0
+# Python-docx for word processing
+python-docx==1.1.0
