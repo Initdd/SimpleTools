@@ -45,22 +45,18 @@ class App:
         if factor == "" or factor == None:
             return STRINGS["error_empty_factor"]
         try:
-            factor = int(factor)
+            factor = float(factor)
         except Exception as e:
             return STRINGS["error_NaN_factor"]
         if factor <= 0:
             return STRINGS["error_low_factor"]
         return None
 
-    def enable_execution_button(self, button, file_entry, resize_entry):
-        button.config(state=tk.NORMAL if file_entry.get() and resize_entry.get() else tk.DISABLED)
-
     def replace_entry_text(self, entry_widget, fileType, fileExt):
         file_path = filedialog.askopenfilename(title="Select a File", filetypes=[(fileType, fileExt), ("All files", "*.*")])
         if file_path:
             entry_widget.delete(0, tk.END)
             entry_widget.insert(0, file_path)
-            self.enable_execution_button(btn_execute, file_path_entry, entry_resize_factor)
 
     def open_resize_font_window(self):
         self.clear_window()
@@ -87,8 +83,8 @@ class App:
         entry_resize_factor.grid(row=1, column=1, pady=5)
 
         # Execution Button
-        btn_execute = tk.Button(self.master, text=STRINGS["resize_font_submit"], command=lambda: message_label.config(text=self.execute_resize_font(
-            file_path_entry.get(), entry_resize_factor.get())), font=self.font)
+        btn_execute = tk.Button(self.master, text=STRINGS["resize_font_submit"], command=lambda:\
+             message_label.config(text=self.execute_resize_font(file_path_entry.get(), entry_resize_factor.get())), font=self.font)
         btn_execute.pack(pady=10)
 
         # Messages Label
@@ -103,7 +99,7 @@ class App:
         status = self.validate(docx_path, resize_factor)
         if status != None:
             return status
-        ampdocx.resize_font(docx_path, resize_factor)
+        return ampdocx.resize_font(docx_path, "amplified_document", float(resize_factor))
 
     def open_amplify_image_window(self):
         self.clear_window()
@@ -130,8 +126,8 @@ class App:
         entry_resize_factor.grid(row=1, column=1, pady=5)
 
         # Execution Button
-        btn_execute = tk.Button(self.master, text=STRINGS["resize_image_submit"], command=lambda: message_label.config(text=self.execute_amplify_image(
-            file_path_entry.get(), entry_resize_factor.get())), font=self.font)
+        btn_execute = tk.Button(self.master, text=STRINGS["resize_image_submit"], command=lambda:\
+            message_label.config(text=self.execute_amplify_image(file_path_entry.get(), entry_resize_factor.get())), font=self.font)
         btn_execute.pack(pady=10)
 
         # Messages Label
@@ -146,7 +142,7 @@ class App:
         status = self.validate(input_path, resize_factor)
         if status != None:
             return status
-        amplify_image(input_path, input_path, amplify_factor)
+        return ampimg.amplify_image(input_path, "amplified_document", float(resize_factor)) #amplify_factor)
 
     def reset_main_menu(self):
         self.clear_window()

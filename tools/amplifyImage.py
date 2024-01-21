@@ -1,6 +1,7 @@
 
 from PIL import Image
 import argparse
+import os
 
 def amplify_image(input_path, output_path, factor):
     try:
@@ -18,8 +19,9 @@ def amplify_image(input_path, output_path, factor):
         amplified_img = img.resize((new_width, new_height))
 
         # Save the amplified image
-        amplified_img.save(output_path)
-        print(f"Image amplified by a factor of {factor} and saved to {output_path}")
+        _, extension = os.path.splitext(input_path)
+        amplified_img.save(output_path+extension)
+        return f"Image saved to {output_path}"
 
     except Exception as e:
         print(f"Error: {e}")
