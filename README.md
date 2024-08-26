@@ -1,4 +1,4 @@
-# Amplify Tools
+# Simple Tools
 
 This Tkinter-based GUI application providing simple tools for
 people not that used to technology, like your grandparents 😉
